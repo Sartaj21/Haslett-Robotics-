@@ -1,42 +1,96 @@
 import styled from 'styled-components';
+import {Link as LinkR} from 'react-router-dom';
+import {Link as LinkS} from 'react-scroll'
 
 export const Nav = styled.nav`
-    background-color: #000;
-    height: 80px;
-    margin-top: --80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    postion: sticky;
+    position: fixed;
     top: 0;
-    z-index: 10;
-
-    @media screen and (max-width: 960px) {
-        transform: 0.8s all ease;
-    }
-
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    background-color: #333;
 `
-
 export const NavbarContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
-    z-index: 1;
     width: 100%;
-    padding: 0 24px;
-    max-width: 1100px;
-`
+    height: 100%;
 
-export const Navlogo = styled(LinkR)`
+`
+export const Navlogo = styled.h1`
+    font-size: 2rem;
     color: #fff;
-    justify-self: flex-start;
-    cursor: pointer;
-    font-size: 1.5rem;
-    display:flex
-    align-items: center;
-    margin-left: 24px;
     font-weight: bold;
+    margin-left: 2rem;
+    font-family: 'Roboto', sans-serif;
+`
+export const MobileIcon = styled.div`
+    display: none;
+    @media (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+        background-color: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+`
+export const NavMenu = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+`
+export const NavItem = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    margin-left: 0rem;
+`
+export const NavLink = styled(LinkR)`
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    padding: 0 1rem;
     text-decoration: none;
+    margin-left: 2rem;
+    font-family: 'Larsseit,Sohne,Roboto', sans-serif;
+    &:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+`
+export const Link = styled(LinkS)`
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    padding: 0 1rem;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-family: 'Larsseit,Sohne,Roboto', sans-serif;
+    &:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+`
+export const Navbar = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    @media (max-width: 768px) {
+        display: none;
+    }
 `
